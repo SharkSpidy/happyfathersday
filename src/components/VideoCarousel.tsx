@@ -137,9 +137,6 @@ export function VideoCarousel() {
                     {clip.title}
                   </h3>
                 </div>
-                <p className="text-sm leading-relaxed text-cream-200/60">
-                  {clip.description}
-                </p>
               </div>
             </article>
           ))}

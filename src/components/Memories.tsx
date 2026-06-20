@@ -52,11 +52,6 @@ export function Memories() {
                 {/* Gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               </div>
-              <figcaption className="px-2 pb-1 pt-4">
-                <p className="caption-text font-sans text-sm leading-relaxed text-cream-200/80">
-                  {photo.caption}
-                </p>
-              </figcaption>
             </figure>
           ))}
         </div>
