@@ -27,9 +27,6 @@ export function Hero() {
         </div>
 
         {/* ── Script tagline ── */}
-        <p className="mb-2 font-script text-2xl text-gold-400 md:text-3xl">
-          To the world&apos;s greatest Dad
-        </p>
 
         {/* ── Main heading ── */}
         <h1 className="font-serif text-5xl font-bold leading-tight text-cream-50 text-shadow-soft sm:text-6xl md:text-7xl lg:text-8xl">

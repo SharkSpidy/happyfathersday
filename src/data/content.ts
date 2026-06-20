@@ -69,49 +69,54 @@ export interface MemoryPhoto {
 /* ── Memories gallery photos ── */
 export const memoryPhotos: MemoryPhoto[] = [
   {
-    src: '/assets/images/11.jpg',
+    src: '/assets/images/41.jpg',
     alt: 'Father and child walking together',
-    caption: 'Our favorite walking trail — you always let me set the pace.',
+    caption: '',
   },
   {
     src: '/assets/images/12.jpg',
     alt: 'Family enjoying a day outdoors',
-    caption: 'The day you first held me — forever etched in time.',
+    caption: '',
   },
   {
     src: '/assets/images/13.jpg',
     alt: 'Dad holding his newborn baby',
-    caption: 'Summer was always soo much better with you by my side.',
+    caption: '',
   },
   {
     src: '/assets/images/14.jpg',
     alt: 'Father and son laughing together',
-    caption: 'Your laugh fills every room. I hear it even now.',
+    caption: '',
   },
   {
     src: '/assets/images/15.jpg',
     alt: 'Dad teaching kid to ride a bike',
-    caption: 'From up there, the world looked so big — and so did you.',
+    caption: '',
   },
   {
     src: '/assets/images/16.jpg',
     alt: 'Father carrying child on shoulders',
-    caption: 'You held the seat until I didn\'t need you to. Thank you.',
+    caption: '',
   },
   {
     src: '/assets/images/17.jpg',
     alt: 'Father and daughter at sunset',
-    caption: 'Golden hour with you is still my favorite light.',
+    caption: '',
   },
   {
     src: '/assets/images/18.jpg',
     alt: 'Family hiking together',
-    caption: 'Every mountain felt smaller with you beside me.',
+    caption: '',
   },
   {
-    src: '/assets/images/19.jpg',
+    src: '/assets/images/27.jpg',
     alt: 'Dad and kids playing in park',
-    caption: 'You taught me that play is serious business.',
+    caption: '',
+  },
+  {
+    src: '/assets/images/23.jpg',
+    alt: '',
+    caption: '',
   },
 ];
 
