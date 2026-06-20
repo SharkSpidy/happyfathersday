@@ -11,8 +11,19 @@ export function VideoCarousel() {
     if (!scrollRef.current) return;
     const cardWidth = scrollRef.current.querySelector('article')?.clientWidth ?? 320;
     const gap = 24;
-    scrollRef.current.scrollBy({
-      left: direction === 'left' ? -(cardWidth + gap) : cardWidth + gap,
+    const scrollLeft = scrollRef.current.scrollLeft;
+    const currentIndex = Math.round(scrollLeft / (cardWidth + gap));
+    let nextIndex = direction === 'left' ? currentIndex - 1 : currentIndex + 1;
+
+    if (nextIndex < 0) {
+      nextIndex = videoClips.length - 1;
+    } else if (nextIndex >= videoClips.length) {
+      nextIndex = 0;
+    }
+
+    setActiveIndex(nextIndex);
+    scrollRef.current.scrollTo({
+      left: nextIndex * (cardWidth + gap),
       behavior: 'smooth',
     });
   };
@@ -51,8 +62,7 @@ export function VideoCarousel() {
             Moments on Camera
           </h2>
           <p className="mt-4 text-base text-cream-200/70">
-            Swipe through some of our favorite moving memories. Click a video
-            to play.
+            Press play, press repeat — this reel is ready to loop the good times.
           </p>
         </div>
 
@@ -61,8 +71,7 @@ export function VideoCarousel() {
           <button
             onClick={() => scrollByCard('left')}
             aria-label="Previous video"
-            className="flex h-12 w-12 items-center justify-center rounded-full border border-navy-300/20 bg-navy-800/50 text-cream-50 transition-all hover:border-gold-500/50 hover:bg-gold-500/10 hover:text-gold-400 disabled:cursor-not-allowed disabled:opacity-30"
-            disabled={activeIndex === 0}
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-navy-300/20 bg-navy-800/50 text-cream-50 transition-all hover:border-gold-500/50 hover:bg-gold-500/10 hover:text-gold-400"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
@@ -84,8 +93,7 @@ export function VideoCarousel() {
           <button
             onClick={() => scrollByCard('right')}
             aria-label="Next video"
-            className="flex h-12 w-12 items-center justify-center rounded-full border border-navy-300/20 bg-navy-800/50 text-cream-50 transition-all hover:border-gold-500/50 hover:bg-gold-500/10 hover:text-gold-400 disabled:cursor-not-allowed disabled:opacity-30"
-            disabled={activeIndex === videoClips.length - 1}
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-navy-300/20 bg-navy-800/50 text-cream-50 transition-all hover:border-gold-500/50 hover:bg-gold-500/10 hover:text-gold-400"
           >
             <ChevronRight className="h-5 w-5" />
           </button>

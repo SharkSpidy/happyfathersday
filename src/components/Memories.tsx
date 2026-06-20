@@ -24,8 +24,7 @@ export function Memories() {
           <span className="h-px w-12 bg-navy-300/40" />
         </div>
         <p className="mt-4 text-base text-cream-200/70">
-          Each photo holds a story — a frozen second of laughter, love, and
-          growing up together.
+          Smiles, silly faces, and pure good vibes — nothing but fun in this feed.
         </p>
       </div>
 

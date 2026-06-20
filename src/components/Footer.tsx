@@ -14,16 +14,13 @@ export function Footer() {
       <p className="font-script text-3xl text-gold-400 md:text-4xl">
         Thank you for everything, Dad.
       </p>
-      <p className="mt-4 max-w-md text-base text-cream-200/70">
-        For the lessons, the laughs, the shoulder rides, and the unwavering
-        support. You are loved more than words can say.
-      </p>
+
 
       {/* ── Signature ── */}
       <div className="mt-12 flex items-center justify-center gap-2 text-sm text-cream-200/60">
         <span>Made with</span>
         <Heart className="h-4 w-4 fill-rose-500 text-rose-500" />
-        <span>for Dad, 2026</span>
+        <span>from Boo</span>
       </div>
     </footer>
   );
